@@ -1,0 +1,35 @@
+﻿@using Smidge;
+@{
+    //TODO: Service Injection & abstraction.
+    var hideFromSearchEngines = true;
+    SmidgeHelper.CreateCssBundle("head-css").RequiresCss("~/css/head.css");
+}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- TODO: HOOK UP SERVICE TO INJECT PAGE SETTINGS -->
+    <link rel="Icon" href="/wwwroot/assets/favicon.ico" type="image/x-icon">
+    <title>Use Helper To Get Title Here</title>
+    <meta name="description" content="Helper To Get Description Here">
+
+    <!-- GOOGLE TAG MANAGER CAN GO HERE -->
+    @if (!hideFromSearchEngines)
+    {
+        <meta name="robots" content="index, follow">
+    } 
+    else
+    {
+        <meta name="robots" content="noindex, nofollow">
+    }
+
+    <!-- TODO: Twitter/OG Data can go here -->
+
+    <!-- TODO: External JS/CSS libraries can go here -->
+
+    <!-- TODO: Inject CSS/JS bundles necessary for head -->
+    @await SmidgeHelper.CssHereAsync("head-css", true)
+
+</head>
