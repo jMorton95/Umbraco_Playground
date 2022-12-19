@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Smidge\Cache\" />
     <Folder Include="Views\Partials\blocklist\Components\" />
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
