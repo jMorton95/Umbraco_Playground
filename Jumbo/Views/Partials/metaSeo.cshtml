@@ -1,6 +1,7 @@
 ﻿@{
     //TODO: Service Injection & abstraction.
     var hideFromSearchEngines = true;
+    SmidgeHelper.RequiresCss("~../wwwroot/css/head.css");
 }
 
 <head>
@@ -28,5 +29,6 @@
     <!-- TODO: External JS/CSS libraries can go here -->
 
     <!-- TODO: Inject CSS/JS bundles necessary for head -->
+    @await SmidgeHelper.CssHereAsync()
 
 </head>

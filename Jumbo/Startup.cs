@@ -1,3 +1,6 @@
+using Smidge;
+using Smidge.Cache;
+
 namespace Jumbo
 {
     public class Startup
@@ -47,6 +50,14 @@ namespace Jumbo
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseRouting();
+
+            app.UseSmidge(options =>
+            {
+                options.DefaultBundleOptions.DebugOptions.SetCacheBusterType<TimestampCacheBuster>();
+                options.DefaultBundleOptions.ProductionOptions.SetCacheBusterType<ConfigCacheBuster>();
+            });
 
             app.UseHttpsRedirection();
 
