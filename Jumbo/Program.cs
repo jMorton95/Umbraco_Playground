@@ -1,4 +1,4 @@
-namespace Jumbo
+namespace Jumbo.Web
 {
     public class Program
     {
