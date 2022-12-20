@@ -14,6 +14,7 @@ namespace Jumbo.Core.Interfaces
         string GetPageDescription();
         string GetPageSetting(string prop);
         IPublishedContent GetCurrentNode();
+        IPublishedContent GetSEO();
 
     }
 }

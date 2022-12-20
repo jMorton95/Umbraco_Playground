@@ -38,5 +38,12 @@ namespace Jumbo.Core.Services
             var pageSetting = node.GetProperty(prop).GetValue().ToString();
             return pageSetting;
         }
+
+        public IPublishedContent GetSEO()
+        {
+            var node = GetCurrentNode();
+            var seo = node.Children.FirstOrDefault(x => x.ContentType.Alias == "sEOPageSettings");
+            return seo;
+        }
     }
 }
