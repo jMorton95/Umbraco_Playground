@@ -44,6 +44,20 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Umbraco.Cms.Core": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Umbraco.Cms.Web.Common": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Umbraco.Cms.Web.Website": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
