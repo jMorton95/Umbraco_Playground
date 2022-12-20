@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms.Core" Version="11.0.0" />
+    <PackageReference Include="Umbraco.Cms.Web.Common" Version="11.0.0" />
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="11.0.0" />
+  </ItemGroup>
+
 </Project>

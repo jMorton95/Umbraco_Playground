@@ -21,6 +21,10 @@
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Jumbo.Core\Jumbo.Core.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <!-- Razor files are needed for the backoffice to work correctly -->
     <CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>

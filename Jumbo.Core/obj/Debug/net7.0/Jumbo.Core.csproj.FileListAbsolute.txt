@@ -1,0 +1,5 @@
+D:\1Programming\Umbraco\Jumbo\Jumbo.Core\obj\Debug\net7.0\Jumbo.Core.csproj.AssemblyReference.cache
+D:\1Programming\Umbraco\Jumbo\Jumbo.Core\obj\Debug\net7.0\Jumbo.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\1Programming\Umbraco\Jumbo\Jumbo.Core\obj\Debug\net7.0\Jumbo.Core.AssemblyInfoInputs.cache
+D:\1Programming\Umbraco\Jumbo\Jumbo.Core\obj\Debug\net7.0\Jumbo.Core.AssemblyInfo.cs
+D:\1Programming\Umbraco\Jumbo\Jumbo.Core\obj\Debug\net7.0\Jumbo.Core.csproj.CoreCompileInputs.cache
