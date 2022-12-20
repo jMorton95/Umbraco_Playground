@@ -21,10 +21,10 @@ namespace Jumbo.Core.Services
         }
         public string GetPageDescription()
         {
-            throw new NotImplementedException();
+            return GetPageSetting("pageDescription");
         }
 
-        public IPublishedContent GetRoot() => _umbracoHelper.ContentAtRoot().FirstOrDefault();
+        public IPublishedContent GetRoot() => _umbracoHelper.ContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "Home");
 
         public IPublishedContent GetCurrentNode()
         {
