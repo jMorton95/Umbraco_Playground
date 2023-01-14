@@ -1,5 +1,20 @@
-﻿@{
+﻿@using Jumbo.Core.Interfaces;
+@inject IMediaController mediaController;
 
+@{
+    string folderName = "Logos";
+    //mediaController.CreateFolderAtRoot(folderName);
 }
 
-<div>Howdy</div>
+
+<div>@mediaController.CreateFolderAtRoot(folderName)</div>
+
+<form>
+    <input type="text" />
+
+    <button type="submit">
+        Click Me!
+    </button>
+</form>
+
+

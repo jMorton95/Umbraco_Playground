@@ -1,4 +1,5 @@
-﻿using Jumbo.Core.Interfaces;
+﻿using Jumbo.Core.Controllers;
+using Jumbo.Core.Interfaces;
 using Jumbo.Core.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Umbraco.Cms.Core.Composing;
@@ -11,6 +12,8 @@ namespace Jumbo.Core.Composers
         public void Compose(IUmbracoBuilder builder)
         {
             builder.Services.AddScoped<IJumboHelper, JumboHelper>();
+            builder.Services.AddScoped<IMediaController, MediaController>();
+
         }
     }
 }
