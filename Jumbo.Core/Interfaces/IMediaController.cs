@@ -9,7 +9,7 @@ namespace Jumbo.Core.Interfaces
 {
     public interface IMediaController
     {
-        public string CreateFolderAtRoot(string folderName);
+        public List<IMedia> CreateFolderAtRoot(string folderName);
         public IMedia GetImageBlobs();
     }
 }

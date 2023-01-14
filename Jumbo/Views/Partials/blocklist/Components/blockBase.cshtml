@@ -3,11 +3,15 @@
 
 @{
     string folderName = "Logos";
+    var images = mediaController.CreateFolderAtRoot(folderName);
     //mediaController.CreateFolderAtRoot(folderName);
 }
 
 
-<div>@mediaController.CreateFolderAtRoot(folderName)</div>
+@foreach(var img in images)
+{
+    <div>@img.Name</div>
+}
 
 <form>
     <input type="text" />
