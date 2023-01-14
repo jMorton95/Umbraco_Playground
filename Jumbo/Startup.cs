@@ -1,7 +1,8 @@
 using Smidge;
 using Smidge.Cache;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Jumbo
+namespace Jumbo.Web
 {
     public class Startup
     {

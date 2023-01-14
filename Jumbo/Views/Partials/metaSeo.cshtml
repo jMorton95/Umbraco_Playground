@@ -1,7 +1,12 @@
-﻿@using Smidge;
+﻿@using Jumbo.Core.Interfaces;
+@using Jumbo.Core.Services;
+@using Smidge;
+@inject IJumboHelper jumboHelper;
 @{
     //TODO: Service Injection & abstraction.
     var hideFromSearchEngines = true;
+    var pageTitle = jumboHelper.GetPageTitle();
+    var pageDescription = jumboHelper.GetPageDescription();
     SmidgeHelper.CreateCssBundle("head-css").RequiresCss("~/css/head.css");
 }
 
@@ -12,8 +17,8 @@
 
     <!-- TODO: HOOK UP SERVICE TO INJECT PAGE SETTINGS -->
     <link rel="Icon" href="/wwwroot/assets/favicon.ico" type="image/x-icon">
-    <title>Use Helper To Get Title Here</title>
-    <meta name="description" content="Helper To Get Description Here">
+    <title>@pageTitle</title>
+    <meta name="description" content="@pageDescription">
 
     <!-- GOOGLE TAG MANAGER CAN GO HERE -->
     @if (!hideFromSearchEngines)
