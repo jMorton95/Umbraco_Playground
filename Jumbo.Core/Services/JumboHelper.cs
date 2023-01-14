@@ -21,10 +21,10 @@ namespace Jumbo.Core.Services
         }
         public string GetPageDescription()
         {
-            throw new NotImplementedException();
+            return GetPageSetting("pageDescription");
         }
 
-        public IPublishedContent GetRoot() => _umbracoHelper.ContentAtRoot().FirstOrDefault();
+        public IPublishedContent GetRoot() => _umbracoHelper.ContentAtRoot().FirstOrDefault(x => x.ContentType.Alias == "Home");
 
         public IPublishedContent GetCurrentNode()
         {
@@ -37,6 +37,13 @@ namespace Jumbo.Core.Services
             var node = GetCurrentNode();
             var pageSetting = node.GetProperty(prop).GetValue().ToString();
             return pageSetting;
+        }
+
+        public IPublishedContent GetSEO()
+        {
+            var node = GetCurrentNode();
+            var seo = node.Children.FirstOrDefault(x => x.ContentType.Alias == "sEOPageSettings");
+            return seo;
         }
     }
 }
